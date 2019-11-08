@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLController.AjouterConsultationController">
+   <children>
+      <ImageView fitHeight="609.0" fitWidth="1045.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../asset/ophthalmologist-750xauto@2x.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="304.0" layoutY="23.0" opacity="0.83" prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: #b9e7fe;">
+         <children>
+            <Label layoutX="44.0" layoutY="47.0" text="CIN">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="44.0" layoutY="12.0" text="Gestion des consultations">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="44.0" layoutY="149.0" text="Opération">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="44.0" layoutY="190.0" text="Date d'opération">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="44.0" layoutY="235.0" text="Poids">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="44.0" layoutY="276.0" text="Prix">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="44.0" layoutY="315.0" text="Observation">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="CINConsultation" layoutX="158.0" layoutY="43.0" prefHeight="25.0" prefWidth="174.0" />
+            <DatePicker fx:id="dateConsultation" layoutX="158.0" layoutY="186.0" />
+            <TextField fx:id="poidsConsultation" layoutX="158.0" layoutY="230.0" />
+            <TextField fx:id="prixConsultation" layoutX="158.0" layoutY="273.0" />
+            <TextArea fx:id="observationConsultation" layoutX="158.0" layoutY="322.0" prefHeight="107.0" prefWidth="200.0" />
+            <JFXButton fx:id="enregistrerConsultation" layoutX="293.0" layoutY="447.0" onAction="#enregisterConsultationAction" style="-fx-background-color: #4e3cc3;" text="Enregistrer" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="annulerConsultation" layoutX="204.0" layoutY="447.0" onAction="#annulerConsultationAction" style="-fx-background-color: #e91640;" text="Annuler" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </JFXButton>
+            <ComboBox fx:id="operationConsultation" layoutX="160.0" layoutY="144.0" prefHeight="25.0" prefWidth="174.0" promptText="Choisir le type" />
+            <Label layoutX="44.0" layoutY="83.0" text="Nom">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="44.0" layoutY="116.0" text="Prenom">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nomConsultation" layoutX="158.0" layoutY="78.0" prefHeight="25.0" prefWidth="174.0" />
+            <TextField fx:id="prenomConsultation" layoutX="158.0" layoutY="112.0" prefHeight="25.0" prefWidth="174.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

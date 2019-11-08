@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="bodybg" prefHeight="350.0" prefWidth="700.0" stylesheets="@../application/application.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLController.AcceuilController">
+   <children>
+      <ImageView fitHeight="375.0" fitWidth="729.0" layoutX="-1.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../asset/ophthalmologist-750xauto@2x.jpg" />
+         </image>
+      </ImageView>
+      <Pane layoutY="1.0" opacity="0.8" prefHeight="373.0" prefWidth="235.0" style="-fx-background-color: #b9e7fe;">
+         <children>
+            <Line endX="100.0" layoutX="101.0" layoutY="99.0" startX="-100.0" stroke="#d3cccc" />
+            <JFXButton fx:id="ConsultationAcceuil" layoutX="16.0" layoutY="159.0" onAction="#consultationAcceuilAction" text="Consultations et contrôle" textOverrun="WORD_ELLIPSIS" underline="true">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="OrdonnanceAcceuil" layoutX="15.0" layoutY="190.0" onAction="#ordonnanceAcceuilAction" text="Ordonnances" underline="true">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="115.0" fitWidth="147.0" layoutX="44.0" layoutY="-15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../asset/logo.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="rendezvous" layoutX="15.0" layoutY="224.0" onAction="#rendezvousAction" text="Rendez vous" underline="true">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="patientAcceuil" layoutX="16.0" layoutY="129.0" onAction="#patientAcceuilAction" text="Dossier personnel des patients " textOverrun="WORD_ELLIPSIS" underline="true">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="6.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../asset/user.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="6.0" layoutY="167.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../asset/small-rocket-ship-silhouette.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="6.0" layoutY="196.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../asset/blank-file.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="6.0" layoutY="231.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../asset/location-pointer.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <JFXButton fx:id="gestionDePaiment" layoutX="13.0" layoutY="258.0" onAction="#gestionDePaimentAction" text="Gestion de paiment" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="4.0" layoutY="266.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../asset/money.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="490.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLController.ConsultationController">
+   <children>
+      <ImageView fitHeight="515.0" fitWidth="971.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../asset/ophthalmologist-750xauto@2x.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="125.0" layoutY="-1.0" prefHeight="508.0" prefWidth="750.0">
+         <children>
+            <TextField fx:id="rechercherCIN" layoutX="47.0" layoutY="29.0" promptText="Rechercher par CIN" />
+            <TextField fx:id="rechercheTypeOperation" layoutX="221.0" layoutY="29.0" prefHeight="25.0" prefWidth="175.0" promptText="Choisisez le type d'operation" />
+            <DatePicker fx:id="rechercherDate" layoutX="418.0" layoutY="29.0" prefHeight="25.0" prefWidth="149.0" promptText="Date" />
+            <JFXButton fx:id="rechercherButton" layoutX="612.0" layoutY="29.0" onAction="#rechercheConsultationAction" opacity="0.8" prefHeight="25.0" prefWidth="91.0" style="-fx-background-color: #d9d9d9;" text="Rechercher" />
+            <Pane layoutX="15.0" layoutY="68.0" opacity="0.8" prefHeight="402.0" prefWidth="721.0" style="-fx-background-color: #b9e7fe;">
+               <children>
+                  <Line endX="519.0" endY="-9.0" layoutX="202.0" layoutY="55.0" startX="-202.0" startY="-9.0" stroke="#d3cccc" />
+                  <Label layoutX="26.0" layoutY="14.0" prefHeight="20.0" prefWidth="175.0" text="Gestion des consultations">
+                     <font>
+                        <Font name="System Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="consultationTable" layoutX="4.0" layoutY="60.0" prefHeight="315.0" prefWidth="646.0">
+                    <columns>
+                      <TableColumn fx:id="CINColumn" prefWidth="75.0" text="CIN" />
+                      <TableColumn fx:id="nomColumn" prefWidth="75.0" text="Nom" />
+                        <TableColumn fx:id="prenomColumn" prefWidth="75.0" text="Prénom" />
+                        <TableColumn fx:id="operationcolumn" prefWidth="75.0" text="Opération" />
+                        <TableColumn fx:id="dateOperationColumn" prefWidth="111.0" text="Date d'operation" />
+                        <TableColumn fx:id="poindsColumn" prefWidth="75.0" text="Poinds" />
+                        <TableColumn fx:id="prixColumn" prefWidth="75.0" text="Prix" />
+                        <TableColumn fx:id="observationColumn" prefWidth="83.0" text="Observation" />
+                    </columns>
+                  </TableView>
+                  <JFXButton fx:id="ajouterConsultationButton" layoutX="548.0" layoutY="12.0" onAction="#ajouterConsultationAction" style="-fx-background-color: #d9d9d9;" text="Ajouter consultation" />
+                  <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="671.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../asset/rubbish-bin-delete-button.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton fx:id="deleteConsultation" layoutX="667.0" layoutY="102.0" onAction="#deleteConsultationAction" prefHeight="25.0" prefWidth="16.0" textFill="#ff0014" />
+                  <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="672.0" layoutY="155.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../asset/edit%20(1).png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton fx:id="editConsultation" layoutX="666.0" layoutY="153.0" prefHeight="25.0" prefWidth="16.0" textFill="WHITE" />
+               </children>
+            </Pane>
+            <JFXButton fx:id="backConsultation" layoutX="6.0" layoutY="2.0" onAction="#backConsultationAction" opacity="0.8" text="&lt;&lt;Back">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
